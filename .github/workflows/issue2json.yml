@@ -59,3 +59,10 @@ jobs:
             echo "No changes today"
             exit 1
           fi
+
+      - name: Close issue
+        uses: peter-evans/repository-dispatch@v3
+        with:
+          token: ${{ secrets.PAT }}
+          event-type: closeissue
+          client-payload: '{"owner": "${{ github.event.repository.owner.login }}", "repo": "${{ github.event.repository.name }}", "issue": "${{ github.event.issue.number }}", "status": "completed"}'
