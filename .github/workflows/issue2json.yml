@@ -16,7 +16,7 @@ jobs:
         run: |
           if [[ "${{ github.event.label.name }}" != "approve" ]]; then
             echo "The label does not match. Skipping script."
-            exit 0
+            exit 1
           fi
     
       - name: Checkout repository
@@ -57,5 +57,5 @@ jobs:
             git push
           else
             echo "No changes today"
-            exit 0
+            exit 1
           fi
