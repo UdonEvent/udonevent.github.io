@@ -98,6 +98,21 @@ body:
       label: 活动地点
       description: 请输入活动地点
 
+  - type: dropdown
+    id: instance_type
+    attributes:
+      label: 房间类型
+      description: 如果不确定则不填写
+      options:
+        - 公开
+        - 公开群组
+        - 群组+
+        - 群组成员
+        - 好友+
+        - 仅限好友
+        - 邀请+
+        - 仅限邀请
+
   - type: textarea
     id: join
     attributes:

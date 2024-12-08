@@ -98,6 +98,21 @@ body:
       label: Location
       description: Event Location / Map / World
 
+  - type: dropdown
+    id: instance_type
+    attributes:
+      label: Instance Type
+      description: Event Instance Type
+      options:
+        - Public
+        - Group Public
+        - Group+
+        - Group
+        - Friends+
+        - Friends
+        - Invite+
+        - Invite
+
   - type: textarea
     id: join
     attributes:
