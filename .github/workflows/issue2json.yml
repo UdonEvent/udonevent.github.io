@@ -66,3 +66,8 @@ jobs:
           token: ${{ secrets.PAT }}
           event-type: closeissue
           client-payload: '{"owner": "${{ github.event.repository.owner.login }}", "repo": "${{ github.event.repository.name }}", "issue": "${{ github.event.issue.number }}", "status": "completed"}'
+
+      - name: Static page
+        uses: peter-evans/repository-dispatch@v3
+        with:
+          event-type: static
