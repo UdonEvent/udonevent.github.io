@@ -2,6 +2,8 @@
 name: Deploy static content to Pages
 
 on:
+  schedule:
+    - cron: '0 4 * * *'
   workflow_dispatch:
   repository_dispatch:
     types: [static]
