@@ -7,6 +7,7 @@ body:
   - type: markdown
     attributes:
       value: |
+        （请不要把标题开头移除）
         感谢您提交您的活动! 请根据要求填写活动信息。
         ## 效果预览
         ![2024-12-08_18-33-49](https://github.com/user-attachments/assets/25dbeb46-c087-468b-92d5-688158fd2603)
