@@ -7,6 +7,9 @@ on:
 permissions:
   contents: write
 
+env:
+  havefaild: 'false'
+
 jobs:
   Issue2Json:
     runs-on: ubuntu-latest
@@ -16,36 +19,42 @@ jobs:
         run: |
           if [[ "${{ github.event.label.name }}" != "approve" ]]; then
             echo "The label does not match. Skipping script."
-            exit 1
+            echo "havefaild=true" >> $GITHUB_ENV
           fi
     
       - name: Checkout repository
+        if: env.havefaild == 'true'
         uses: actions/checkout@v4
         with:
           path: ${{ github.event.repository.name }}
     
       - name: Checkout EventIssue2Json repository
+        if: env.havefaild == 'true'
         uses: actions/checkout@v4
         with:
           repository: Sonic853/EventIssue2Json
           path: EventIssue2Json
 
       - name: Install Deno
+        if: env.havefaild == 'true'
         uses: denoland/setup-deno@v2
         with:
           deno-version: vx.x.x
 
       - name: Install deno.json
+        if: env.havefaild == 'true'
         working-directory: EventIssue2Json
         run: |
           deno install
 
       - name: Output issue to Deno script
+        if: env.havefaild == 'true'
         working-directory: ${{ github.event.repository.name }}
         run: |
           deno run --allow-net --allow-read --allow-write --allow-env --allow-ffi ../EventIssue2Json/issue2json.ts --owner=${{ github.event.repository.owner.login }} --repo=${{ github.event.repository.name }} --issue=${{ github.event.issue.number }} --token=${{ secrets.PAT }}
 
       - name: Check for changes and commit in ${{ github.event.repository.name }}
+        if: env.havefaild == 'true'
         working-directory: ${{ github.event.repository.name }}
         run: |
           git config --global user.name github-actions
@@ -57,10 +66,11 @@ jobs:
             git push
           else
             echo "No changes today"
-            exit 1
+            echo "havefaild=true" >> $GITHUB_ENV
           fi
 
       - name: Close issue
+        if: env.havefaild == 'true'
         uses: peter-evans/repository-dispatch@v3
         with:
           token: ${{ secrets.PAT }}
@@ -68,6 +78,7 @@ jobs:
           client-payload: '{"owner": "${{ github.event.repository.owner.login }}", "repo": "${{ github.event.repository.name }}", "issue": "${{ github.event.issue.number }}", "status": "completed"}'
 
       - name: Static page
+        if: env.havefaild == 'true'
         uses: peter-evans/repository-dispatch@v3
         with:
           event-type: static
