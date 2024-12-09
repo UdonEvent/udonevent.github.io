@@ -18,6 +18,7 @@ jobs:
         id: check-label
         run: |
           if [[ "${{ github.event.label.name }}" != "approve" ]]; then
+            echo "The label does not match. Skipping script."
             echo "havefaild=true" >> $GITHUB_ENV
           fi
     
