@@ -7,6 +7,7 @@ body:
   - type: markdown
     attributes:
       value: |
+        (Please do not remove the beginning of the title)
         Thank you for submitting your event! Please fill in the event information as required.
         ## Preview
         ![2024-12-08_18-33-49](https://github.com/user-attachments/assets/25dbeb46-c087-468b-92d5-688158fd2603)
