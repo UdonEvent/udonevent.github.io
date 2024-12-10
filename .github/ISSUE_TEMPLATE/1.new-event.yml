@@ -1,0 +1,233 @@
+name: 📅 New Event
+title: "[New Event]"
+description: Add Event to Udon Event Request
+labels: [new event]
+assignees: Sonic853
+body:
+  - type: markdown
+    attributes:
+      value: |
+        (Please do not remove the beginning of the title)
+        Thank you for submitting your event! Please fill in the event information as required.
+        ## Preview
+        ![2024-12-08_18-33-49](https://github.com/user-attachments/assets/25dbeb46-c087-468b-92d5-688158fd2603)
+
+  - type: input
+    id: event_id
+    attributes:
+      label: Event ID
+      description: This ID is used for future event updates, please use [GUID](https://richardkundl.github.io/shortguid/) generator to generate
+      placeholder: 33760b08-f204-49f3-b3a4-1462823c5c7c
+    validations:
+      required: true
+
+  - type: input
+    id: event_title
+    attributes:
+      label: Event Name
+      description: Enter your Event Name
+      placeholder: Event Name
+    validations:
+      required: true
+
+  - type: textarea
+    id: event_description
+    attributes:
+      label: Event Description
+      description: Enter Description. Support Unity [Rich Text](https://docs.unity3d.com/Packages/com.unity.textmeshpro@4.0/manual/RichText.html)
+      placeholder: Description
+
+  - type: input
+    id: author
+    attributes:
+      label: Event Author
+      description: Enter Author Name
+      placeholder: Author Name
+    validations:
+      required: true
+
+  - type: checkboxes
+    id: platform
+    attributes:
+      label: Event Platform
+      options:
+        - label: PC
+        - label: Android
+        - label: iOS
+
+  - type: input
+    id: group_name
+    attributes:
+      label: Group Name
+      placeholder: Shader
+
+  - type: input
+    id: group_id
+    attributes:
+      label: Group ID
+      description: Ex. SHADER.4318 or grp_1b306ee9-0807-4646-9285-76e51bd844bc
+      placeholder: grp_1b306ee9-0807-4646-9285-76e51bd844bc
+
+  - type: input
+    id: start
+    attributes:
+      label: Start Time
+      description: Event Start Time Ex. 2024-12-07 22:30
+      placeholder: 2024-12-07 22:30
+    validations:
+      required: true
+
+  - type: input
+    id: end
+    attributes:
+      label: End Time
+      description: Event End Time
+      placeholder: 2024-12-08 01:00
+
+  - type: input
+    id: timezone
+    attributes:
+      label: Your Timezone
+      description: 'If you dont know your timezone, please Click <a target="_blank" href="https://www.google.com/search?q=where+is+my+time+zone">Google Search: where is my time zone</a>.'
+      placeholder: "+08:00"
+    validations:
+      required: true
+
+  - type: input
+    id: location
+    attributes:
+      label: Location
+      description: Event Location / Map / World
+
+  - type: dropdown
+    id: instance_type
+    attributes:
+      label: Instance Type
+      description: Event Instance Type
+      options:
+        - Public
+        - Group Public
+        - Group+
+        - Group
+        - Friends+
+        - Friends
+        - Invite+
+        - Invite
+
+  - type: textarea
+    id: join
+    attributes:
+      label: How to Join
+      description: Support Unity [Rich Text](https://docs.unity3d.com/Packages/com.unity.textmeshpro@4.0/manual/RichText.html)
+      placeholder: Ex. Join the Group Instance World.
+
+  - type: textarea
+    id: event_require
+    attributes:
+      label: Event Require
+      description: Support Unity [Rich Text](https://docs.unity3d.com/Packages/com.unity.textmeshpro@4.0/manual/RichText.html)
+      placeholder: Ex. No VeryPoor Avatar
+
+  - type: dropdown
+    id: language
+    attributes:
+      label: Event Language
+      description: Only languages supported by [VRChat](https://github.com/vrchat-community/ClientSim/blob/43e43b046fa2aff9b31d64698fc0868df43b44eb/Packages/com.vrchat.ClientSim/Runtime/Settings/ClientSimSettings.cs#L64-L95) are supported
+      options:
+        - English
+        - Chinese Simplified
+        - Chinese Traditional
+        - Japanese
+        - Russian
+        - Korean
+        - French
+        - German
+        - Italian
+        - Spanish
+        - Portuguese
+        - Brazilian
+        - Hebrew
+        - Polish
+        - Toki Pona
+        - Indonesian
+        - Swedish
+        - Dutch
+        - Ukrainian
+        - Danish
+        - Norwegian
+        - Thai
+        - Finnish
+        - Hungarian
+        - Czech
+        - Turkish
+        - Arabic
+        - Romanian
+        - Vietnamese
+    validations:
+      required: true
+
+  - type: textarea
+    id: note
+    attributes:
+      label: Note
+      description: If you have additional information, please add it here. Support Unity [Rich Text](https://docs.unity3d.com/Packages/com.unity.textmeshpro@4.0/manual/RichText.html)
+
+  - type: checkboxes
+    id: regular_event
+    attributes:
+      label: Is Regular Event?
+      options:
+        - label: Yes, It's Regular
+
+  - type: dropdown
+    id: event_often
+    attributes:
+      label: How Often?
+      description: If it is a regular event, please fill in; temporarily does not support non-regular events
+      options:
+        - Every Week
+        - Every Two Weeks
+        - Every Month
+        - Every Season
+        - Every Year
+        - Every Day
+
+  - type: input
+    id: maximum_duration
+    attributes:
+      label: Regular Event Maximum cycle time
+      description: If there is no please leave empty
+      placeholder: 2077-12-07 22:30
+
+  - type: checkboxes
+    id: tags
+    attributes:
+      label: Tags
+      options:
+        - label: Regular
+        - label: Beginner's guide
+        - label: Developer Meeting
+        - label: Avatar Modification Meeting
+        - label: Music
+        - label: DJ
+        - label: Dance
+        - label: Movie
+        - label: Club
+        - label: Party
+        - label: Game
+        - label: Exchange
+        - label: Community Exchange
+        - label: Roleplay
+        - label: Academic
+        - label: Leisure
+        - label: Travel
+        - label: Expo
+        - label: VR Drinking Party
+        - label: Avatar Trial
+
+  - type: input
+    id: tags_other
+    attributes:
+      label: Other Tags
+      description: If there is no suitable tag, please fill in here, separated by commas
+      placeholder: "Tag1, Tag2, Tag3"

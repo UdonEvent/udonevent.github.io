@@ -1,0 +1,240 @@
+name: 📅 新建活动
+title: "[新建活动]"
+description: 请求添加活动到 Udon Event
+labels: [new event]
+assignees: Sonic853
+body:
+  - type: markdown
+    attributes:
+      value: |
+        （请不要把标题开头移除）
+        感谢您提交您的活动! 请根据要求填写活动信息。
+        ## 效果预览
+        ![2024-12-08_18-33-49](https://github.com/user-attachments/assets/25dbeb46-c087-468b-92d5-688158fd2603)
+
+  - type: input
+    id: event_id
+    attributes:
+      label: 活动 ID
+      description: 该 ID 用于后续活动更新使用，请用 [GUID](https://richardkundl.github.io/shortguid/) 生成器生成
+      placeholder: 33760b08-f204-49f3-b3a4-1462823c5c7c
+    validations:
+      required: true
+
+  - type: input
+    id: event_title
+    attributes:
+      label: 活动名称
+      description: 输入您的活动名称
+      placeholder: 活动名称
+    validations:
+      required: true
+
+  - type: textarea
+    id: event_description
+    attributes:
+      label: 活动描述
+      description: 输入描述。支持 Unity [富文本](https://docs.unity3d.com/Packages/com.unity.textmeshpro@4.0/manual/RichText.html)
+      placeholder: 描述这个活动
+
+  - type: input
+    id: author
+    attributes:
+      label: 举办者
+      description: 输入活动举办者
+      placeholder: 活动举办者
+    validations:
+      required: true
+
+  - type: checkboxes
+    id: platform
+    attributes:
+      label: 支持平台
+      options:
+        - label: PC
+        - label: Android
+        - label: iOS
+
+  - type: input
+    id: group_name
+    attributes:
+      label: VRChat 组名称
+      placeholder: Shader
+
+  - type: input
+    id: group_id
+    attributes:
+      label: 组 ID
+      description: 例如： SHADER.4318 或 grp_1b306ee9-0807-4646-9285-76e51bd844bc
+      placeholder: grp_1b306ee9-0807-4646-9285-76e51bd844bc
+
+  - type: input
+    id: start
+    attributes:
+      label: 活动开始时间
+      description: 输入活动开始时间，例如： 2024-12-07 22:30
+      placeholder: 2024-12-07 22:30
+    validations:
+      required: true
+
+  - type: input
+    id: end
+    attributes:
+      label: 活动结束时间
+      description: 输入活动结束时间
+      placeholder: 2024-12-08 01:00
+
+  - type: input
+    id: timezone
+    attributes:
+      label: 您的时区
+      description: '如果您不知道您的时区，请<a target="_blank" href="https://www.google.com/search?q=where+is+my+time+zone">Google 搜索：where is my time zone</a>'
+      placeholder: "+08:00"
+    validations:
+      required: true
+
+  - type: input
+    id: location
+    attributes:
+      label: 活动地点
+      description: 请输入活动地点
+
+  - type: dropdown
+    id: instance_type
+    attributes:
+      label: 房间类型
+      description: 如果不确定则不填写
+      options:
+        - 公开
+        - 公开群组
+        - 群组+
+        - 群组成员
+        - 好友+
+        - 仅限好友
+        - 邀请+
+        - 仅限邀请
+
+  - type: textarea
+    id: join
+    attributes:
+      label: 参加方式
+      description: 支持 Unity [富文本](https://docs.unity3d.com/Packages/com.unity.textmeshpro@4.0/manual/RichText.html)
+      placeholder: Ex. Join the Group Instance World.
+
+  - type: textarea
+    id: event_require
+    attributes:
+      label: 活动要求
+      description: 支持 Unity [富文本](https://docs.unity3d.com/Packages/com.unity.textmeshpro@4.0/manual/RichText.html)
+      placeholder: 例如：不允许 VeryPoor 的模型
+
+  - type: dropdown
+    id: language
+    attributes:
+      label: 活动语言
+      description: 只支持 [VRChat 支持的语言](https://github.com/vrchat-community/ClientSim/blob/43e43b046fa2aff9b31d64698fc0868df43b44eb/Packages/com.vrchat.ClientSim/Runtime/Settings/ClientSimSettings.cs#L64-L95)
+      options:
+        - Chinese Simplified
+        - Chinese Traditional
+        - English
+        - Japanese
+        - Russian
+        - Korean
+        - French
+        - German
+        - Italian
+        - Spanish
+        - Portuguese
+        - Brazilian
+        - Hebrew
+        - Polish
+        - Toki Pona
+        - Indonesian
+        - Swedish
+        - Dutch
+        - Ukrainian
+        - Danish
+        - Norwegian
+        - Thai
+        - Finnish
+        - Hungarian
+        - Czech
+        - Turkish
+        - Arabic
+        - Romanian
+        - Vietnamese
+    validations:
+      required: true
+
+  - type: textarea
+    id: note
+    attributes:
+      label: 备注
+      description: 如果您有其他信息，在此处输入。支持 Unity [富文本](https://docs.unity3d.com/Packages/com.unity.textmeshpro@4.0/manual/RichText.html)
+
+  - type: checkboxes
+    id: regular_event
+    attributes:
+      label: 是否是定期活动？
+      options:
+        - label: 是定期活动
+
+  - type: dropdown
+    id: event_often
+    attributes:
+      label: 该活动多久举办一次？
+      description: 如果是定期活动，请填写；暂时不支持不定期时间
+      options:
+        - 每周
+        - 每两周
+        - 每月
+        - 每季度
+        - 每年
+        - 每天
+
+  - type: input
+    id: maximum_duration
+    attributes:
+      label: 定期活动最大持续时间
+      description: 如果没有请留空
+      placeholder: 2077-12-07 22:30
+
+  - type: checkboxes
+    id: tags
+    attributes:
+      label: 标签
+      options:
+        - label: 定期活动
+        - label: 新手引导
+        - label: 开发者交流
+        - label: 模型修改交流
+        - label: 音乐
+        - label: DJ
+        - label: 跳舞
+        - label: 观影
+        - label: 俱乐部
+        - label: 聚会派对
+        - label: 游戏
+        - label: 交流
+        - label: 社区交流
+        - label: 角色扮演
+        - label: 学术交流
+        - label: 休闲
+        - label: 旅游
+        - label: 展会
+        - label: VR 酒会
+        - label: 虚拟形象试用
+
+  - type: input
+    id: tags_other
+    attributes:
+      label: 其他标签
+      description: 如果上述没有适合的标签，请在此填写，以逗号分隔
+      placeholder: "标签1，标签2，标签3"
+
+  - type: input
+    id: tags_other_en
+    attributes:
+      label: 其他标签对应的英文
+      description: 如果你填写了上述的其他标签，请在此填写每个标签对应的英文，以逗号分隔，当然你也可以不填，由管理员自行补充（不推荐）
+      placeholder: "tag1，tag2，tag3"
