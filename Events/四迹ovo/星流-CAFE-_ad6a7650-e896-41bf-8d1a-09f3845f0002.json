@@ -1,0 +1,29 @@
+{
+  "issue": "1",
+  "id": "ad6a7650-e896-41bf-8d1a-09f3845f0002",
+  "author": "四迹ovo",
+  "start": "2024-12-14 22:30",
+  "end": "2024-12-15 00:30",
+  "timezone": "+08:00",
+  "location": "星流cafe",
+  "instance_type": "Group+",
+  "platform": [
+    "PC"
+  ],
+  "tags": [
+    "Exchange"
+  ],
+  "tags_other": [],
+  "tags_other_zhcn": [],
+  "group_name": "星流-CAFE-",
+  "group_id": "grp_9c7b1f70-850c-4b43-aacd-35435cb271fa",
+  "language": "zh-CN",
+  "title": "星流-CAFE-",
+  "description": "这里是星流咖啡厅，每周一起聊天放松的地方；欢迎喜欢二次元文化与可爱的东西的话题的朋友们，社恐与vrchat新手可以找staff们提供帮助",
+  "require": "1. 为了您与他人的体验，请尽量使用Poor等级及以下的模型\n2. 入店后请不要大声喧哗\n3. 禁止使用范围和全图特效\n4. 点餐只能允许点菜单内的内容\n5. STAFF对您使用暂停手势时，请停止自己的行为\n6. 如在店内进行录像，公开发布需经STAFF同意\n7. 发现严重违规者会踢出世界处理，并加入世界内置永久黑名单",
+  "join": "加入 Group 后准时在 Group Instance 列表找到星流咖啡的活动 Instance 加入！",
+  "note": "",
+  "regular_event": true,
+  "event_often": "Every Week",
+  "maximum_duration": ""
+}

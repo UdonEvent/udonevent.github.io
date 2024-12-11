@@ -1,0 +1,31 @@
+{
+  "issue": "1",
+  "id": "99bd9059-eeae-45bb-87d9-628aed6e7fb6",
+  "author": "VRC贴贴研究人员",
+  "start": "2024-12-09 14:30",
+  "end": "2024-12-09 14:29",
+  "timezone": "+08:00",
+  "location": "",
+  "instance_type": "",
+  "platform": [
+    "PC"
+  ],
+  "tags": [
+    "Exchange",
+    "Community Exchange",
+    "Academic"
+  ],
+  "tags_other": [],
+  "tags_other_zhcn": [],
+  "group_name": "",
+  "group_id": "",
+  "language": "zh-CN",
+  "title": "对于在VRC中贴贴促进荷尔蒙分泌从而提升幸福感的分析和讨论",
+  "description": "<b>贴贴使人快乐</b>",
+  "require": "",
+  "join": "",
+  "note": "",
+  "regular_event": false,
+  "event_often": "",
+  "maximum_duration": ""
+}
