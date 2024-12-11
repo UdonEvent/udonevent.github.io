@@ -1,6 +1,6 @@
-# Udon 活动日历源模板
+## Udon 活动日历默认源
 
-可自主搭建自己的活动日历源
+采用 issue 提交表单，并使用工作流来完成活动创建，最后部署活动源来达成活动日历源的搭建。
 
 ## License restrictions 许可限制
 Individuals or companies in Chinese Mainland (except Hong Kong China, Macau China, and Taiwan Province of China) are prohibited from using this LGPL license and using this repository and products if the following circumstances apply:
