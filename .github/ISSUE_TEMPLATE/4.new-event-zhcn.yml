@@ -46,6 +46,13 @@ body:
     validations:
       required: true
 
+  - type: textarea
+    id: event_image
+    attributes:
+      label: 活动图片
+      description: 请直接将图片拖入输入框中，图片尺寸限制在 1024px x 682px，超过这个尺寸将会被压缩以及裁剪
+      placeholder: 点击此输入框，然后拖拽您的图片到此处
+
   - type: checkboxes
     id: platform
     attributes:
@@ -119,7 +126,7 @@ body:
     attributes:
       label: 参加方式
       description: 支持 Unity [富文本](https://docs.unity3d.com/Packages/com.unity.textmeshpro@4.0/manual/RichText.html)
-      placeholder: Ex. Join the Group Instance World.
+      placeholder: 例如：通过群组加入房间
 
   - type: textarea
     id: event_require

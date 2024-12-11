@@ -46,6 +46,13 @@ body:
     validations:
       required: true
 
+  - type: textarea
+    id: event_image
+    attributes:
+      label: Event Image
+      description: Please drag and drop your image into the input box. The image size limit is 1024px x 682px, and if it exceeds this size, it will be compressed and cropped.
+      placeholder: Click the input box and drag and drop your image to here
+
   - type: checkboxes
     id: platform
     attributes:
