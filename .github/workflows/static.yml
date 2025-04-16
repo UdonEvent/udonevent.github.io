@@ -38,21 +38,43 @@ jobs:
         with:
           repository: Sonic853/EventIssue2Json
           path: EventIssue2Json
+    
+      - name: Checkout EventConverter repository
+        uses: actions/checkout@v4
+        with:
+          repository: Sonic853/EventConverter
+          path: EventConverter
 
       - name: Install Deno
         uses: denoland/setup-deno@v2
         with:
           deno-version: vx.x.x
 
-      - name: Install deno.json
+      - name: Install EventIssue2Json deno.json
         working-directory: EventIssue2Json
         run: |
           deno install
 
-      - name: Output issue to Deno script
+      - name: Publish data
         working-directory: ${{ github.event.repository.name }}
         run: |
           deno run --allow-net --allow-read --allow-write --allow-env --allow-ffi ../EventIssue2Json/publish.ts
+
+      - name: cache EventConverter
+        working-directory: EventConverter
+        run: |
+          deno cache --allow-import --allow-net --allow-read --allow-write ics/getdata.ts
+          deno cache --allow-import --allow-net --allow-read --allow-write rlvrcv2/getdata.ts
+
+      - name: Publish EventConverter data
+        working-directory: EventConverter
+        run: |
+          deno run --allow-import --allow-net --allow-read --allow-write ics/getdata.ts
+          deno run --allow-import --allow-net --allow-read --allow-write rlvrcv2/getdata.ts --url=${{ secrets.RLVRCV2_URL }}
+      
+      - name: Copy EventConverter/pages files to repository pages
+        run: |
+          cp -r EventConverter/pages/* ./${{ github.event.repository.name }}/pages/unofficial
 
       - name: Setup Pages
         uses: actions/configure-pages@v5
