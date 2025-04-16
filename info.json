@@ -1,0 +1,7 @@
+{
+  "name": "Udon Event Calendar",
+  "description": "Default Event source",
+  "language": "zh-CN",
+  "url": "https://github.com/UdonEvent/udonevent.github.io",
+  "submitUrl": "https://github.com/UdonEvent/udonevent.github.io/issues/new/choose"
+}
