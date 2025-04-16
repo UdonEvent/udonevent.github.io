@@ -71,7 +71,6 @@ jobs:
           username: '${{ secrets.SERVER_USER }}'
           server: '${{ secrets.SERVER_IP }}'
           ssh_private_key: ${{ secrets.SSH_PRIVATE_KEY }}
-          password: ${{ secrets.SERVER_PASS }}
           local_path: './${{ github.event.repository.name }}/pages/*'
           remote_path: '${{ secrets.SERVER_REMOTE_PATH }}/UdonEvents'
           sftpArgs: '-o ConnectTimeout=5'
