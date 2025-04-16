@@ -64,3 +64,15 @@ jobs:
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4
+
+      - name: Deploy to Server
+        uses: wlixcc/SFTP-Deploy-Action@v1.2.6
+        with:
+          username: '${{ secrets.SERVER_USER }}'
+          server: '${{ secrets.SERVER_IP }}'
+          ssh_private_key: ${{ secrets.SSH_PRIVATE_KEY }}
+          password: ${{ secrets.SERVER_PASS }}
+          local_path: './pages/*'
+          remote_path: '${{ secrets.SERVER_REMOTE_PATH }}/UdonEvents'
+          sftpArgs: '-o ConnectTimeout=5'
+          delete_remote_files: true

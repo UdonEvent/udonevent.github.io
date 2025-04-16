@@ -58,5 +58,26 @@
   },
   "Avatar Trial": {
     "zh-CN": "虚拟形象试用"
+  },
+  "Learn": {
+    "zh-CN": "学习"
+  },
+  "Match": {
+    "zh-CN": "赛事"
+  },
+  "Entertainment": {
+    "zh-CN": "娱乐"
+  },
+  "Recruit": {
+    "zh-CN": "招募"
+  },
+  "Photography": {
+    "zh-CN": "摄影"
+  },
+  "Like-minded": {
+    "zh-CN": "同好"
+  },
+  "Paid": {
+    "zh-CN": "收费"
   }
 }
