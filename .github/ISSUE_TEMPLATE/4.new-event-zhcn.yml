@@ -65,14 +65,14 @@ body:
   - type: input
     id: group_name
     attributes:
-      label: VRChat 组名称
+      label: VRChat 组名称/链接名
       placeholder: Shader
 
   - type: input
     id: group_id
     attributes:
-      label: 组 ID
-      description: 例如： SHADER.4318 或 grp_1b306ee9-0807-4646-9285-76e51bd844bc
+      label: 组 ID/链接 url
+      description: 例如： SHADER.4318 或 grp_1b306ee9-0807-4646-9285-76e51bd844bc 以及 https://x.com/test
       placeholder: grp_1b306ee9-0807-4646-9285-76e51bd844bc
 
   - type: input
