@@ -63,8 +63,8 @@ jobs:
       - name: cache EventConverter
         working-directory: EventConverter
         run: |
-          deno cache --allow-import --allow-net --allow-read --allow-write ics/getdata.ts
-          deno cache --allow-import --allow-net --allow-read --allow-write rlvrcv2/getdata.ts
+          deno cache --allow-import ics/getdata.ts
+          deno cache --allow-import rlvrcv2/getdata.ts
 
       - name: Publish EventConverter data
         working-directory: EventConverter
