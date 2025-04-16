@@ -74,6 +74,7 @@ jobs:
       
       - name: Copy EventConverter/pages files to repository pages
         run: |
+          mkdir -p ./${{ github.event.repository.name }}/pages/unofficial
           cp -r EventConverter/pages/* ./${{ github.event.repository.name }}/pages/unofficial
 
       - name: Setup Pages
