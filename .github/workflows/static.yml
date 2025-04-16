@@ -66,7 +66,7 @@ jobs:
         uses: actions/deploy-pages@v4
 
       - name: Deploy to Server
-        uses: wlixcc/SFTP-Deploy-Action@v1.2.6
+        uses: wlixcc/SFTP-Deploy-Action@v1.2.5
         with:
           username: '${{ secrets.SERVER_USER }}'
           server: '${{ secrets.SERVER_IP }}'
