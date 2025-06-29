@@ -139,7 +139,7 @@ body:
     id: language
     attributes:
       label: 活动语言
-      description: 只支持 [VRChat 支持的语言](https://github.com/vrchat-community/ClientSim/blob/43e43b046fa2aff9b31d64698fc0868df43b44eb/Packages/com.vrchat.ClientSim/Runtime/Settings/ClientSimSettings.cs#L64-L95)
+      description: 只支持 [VRChat 支持的语言](https://github.com/vrchat-community/ClientSim/blob/2fc16fdec096b75e61086d925421197e384b2931/Source/Runtime/Settings/ClientSimSettings.cs#L64-L95)
       options:
         - Chinese Simplified
         - Chinese Traditional
